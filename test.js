@@ -47,3 +47,29 @@ test("One euro should be 0.87 pounds", function() {
     // Hago mi comparación (la prueba)
     expect(fromEuroToGBP(3.5)).toBe(3.045);
 })
+
+// Ejercicio
+
+test("One dollar should be 146.2616822 yens", function() {
+    // Importo la funcion desde app.js
+    const { fromDollarToYen } = require('./app.js');
+
+    // Uso la función como debe ser usada
+    const yens = fromDollarToYen(3.5);
+    const expected = 3.5 * 0.87;
+
+    // Hago mi comparación (la prueba)
+    expect(fromDollarToYen(3.5)).toBe(2193.925234);
+})
+
+test("One Yan should be 0.005559105431 pounds", function() {
+    // Importo la funcion desde app.js
+    const { fromYanToPound } = require('./app.js');
+
+    // Uso la función como debe ser usada
+    const pounds = fromYanToPound(3.5);
+    const expected = 3.5 * 0.87;
+
+    // Hago mi comparación (la prueba)
+    expect(fromYanToPound(3.5)).toBe(0.01945686901);
+})
